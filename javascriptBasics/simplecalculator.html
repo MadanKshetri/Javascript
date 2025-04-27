@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+</head>
+<body>
+
+  <h1>Simple Calculator</h1>
+
+  <input type="number" id="number1" placeholder="Enter first number">
+  <input type="number" id="number2" placeholder="Enter second number">
+
+  <br><br>
+
+  <button onclick="add()">Add</button>
+  <button onclick="subtract()">Subtract</button>
+  <button onclick="multiply()">Multiply</button>
+  <button onclick="divide()">Divide</button>
+
+  <h2 id="result">Result: </h2>
+
+</body>
+<script>
+    function add() {
+      let num1 = document.getElementById("number1").value;
+      let num2 = document.getElementById("number2").value;
+  
+      let sum = Number(num1) + Number(num2);
+  
+      document.getElementById("result").innerText = "Result: " + sum;
+    }
+  
+    function subtract() {
+      let num1 = document.getElementById("number1").value;
+      let num2 = document.getElementById("number2").value;
+  
+      let difference = Number(num1) - Number(num2);
+  
+      document.getElementById("result").innerText = "Result: " + difference;
+    }
+  
+    function multiply() {
+      let num1 = document.getElementById("number1").value;
+      let num2 = document.getElementById("number2").value;
+  
+      let product = Number(num1) * Number(num2);
+  
+      document.getElementById("result").innerText = "Result: " + product;
+    }
+  
+    function divide() {
+      let num1 = document.getElementById("number1").value;
+      let num2 = document.getElementById("number2").value;
+  
+      if (num2 == 0) {
+      } else {
+        let quotient = Number(num1) / Number(num2);
+        document.getElementById("result").innerText = "Result: " + quotient;
+      }
+    }
+  </script>
+  
+</html>
